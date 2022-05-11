@@ -31,9 +31,14 @@ body{
 }
 
 #fire_men{
-
+    position:relative;
+    left:12%;
 }
 
+#ice_girl{
+    position:relative;
+    right:20%;
+}
 
 .first_container{
     width:50%;
