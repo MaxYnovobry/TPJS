@@ -10,34 +10,28 @@ body{
 
 #container{
     display:flex;
-    flex-direction: row;
     width:100%;
     padding : 0;
     margin : 0
 }
 
-#fire{
-    width:150px;
-    height:20000px;
-    position:relative;
-    left:15vw;
+.fire{
+    background: url("img/seq-a.png");
+    z-index: 2;
+
 }
 
-#ice{
-    width:150px;
-    height:20000px;
-    position:relative;
-    left:20vw;
+.ice{
+    background: url("img/seq-b.png");
+    z-index:2;
 }
 
-#fire_men{
+.fire_men{
     position:relative;
-    left:12%;
 }
 
-#ice_girl{
+.ice_girl{
     position:relative;
-    right:20%;
 }
 
 .first_container{
