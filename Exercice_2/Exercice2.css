@@ -18,16 +18,28 @@ body{
 .fire{
     background: url("img/seq-a.png");
     z-index: 2;
+    position:fixed;
+    top:30%;
+    left:15%;
+    width:301px;
+    height:389px;
 
 }
 
 .ice{
     background: url("img/seq-b.png");
     z-index:2;
+    background-size:cover;
+    position:fixed;
+    top:30%;
+    right:15%;
+    width:203px;
+    height:302px;
 }
 
 .fire_men{
     position:relative;
+    left:31.8%;
 }
 
 .ice_girl{
