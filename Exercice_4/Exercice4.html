@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="Exercice4.css">
-    <script src="Exercice4.js"> </script>
+    <script defer src="Exercice4.js"></script>
     <title>Title</title>
+    <link rel="stylesheet" href="Exercice4.css">
 </head>
 <body>
-<h1> Meteo</h1>
 
 
-<form  method="post">
-    <label for="name">Nom de la Ville</label>
-    <input type="text" id="name" name="user_name">
-    <button type="submit">Rechercher</button>
-</form>
-
-<div id="city"></div>
-<div id="temps"></div>
-<div id="weather"></div>
+<div class="navbar">
+    <h1> Meteo</h1>
+    <form method="post" id="search">
+        <input type="text" id="name" name="user_name" placeholder="Ville">
+        <button type="submit" id="sub">Rechercher</button>
+    </form>
+</div>
+<div id="result">
+    <div id="city"></div>
+    <div id="temps"></div>
+    <div id="description">
+        <img id="icon" class="hidden">
+        <div id="weather"></div>
+    </div>
+</div>
 </body>
+
+
 </html>

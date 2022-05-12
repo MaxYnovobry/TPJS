@@ -1,34 +1,43 @@
 
-function append(parent, el) {
-    return parent.appendChild(el);
-}
-var myInit = { method: 'GET',
-    mode: 'cors',
-    cache: 'default' };
-
-let cityName = "Marseille"
-
-let APIKEY = "2e4af7e54c09bc3e39db27bcf3cdb9b2"
 
 
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}&units=metric&lang=fr`;
+let input = document.getElementById('name')
+let sub = document.getElementById('sub')
+sub.addEventListener("click" , function(e) {
+    CALLAPI(input.value)
+    e.preventDefault()
+})
 
 
-fetch(url, myInit)
-    .then((resp) => resp.json())
-    .then(function (data) {
-        console.log(data)
+function CALLAPI(cityName) {
+
+    let myInit = { method: 'GET',
+        mode: 'cors',
+        cache: 'default' };
+
+    let APIKEY = "2e4af7e54c09bc3e39db27bcf3cdb9b2"
+
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}&units=metric&lang=fr`;
+
+    fetch(url, myInit)
+        .then((resp) => resp.json())
+        .then(function (data) {
+            console.log(data)
             let temps = document.getElementById('temps')
             let city = document.getElementById('city')
             let weathers = document.getElementById('weather')
+            let icon = document.getElementById('icon')
             temps.innerHTML = data.main.temp;
             city.innerHTML = data.name;
             weathers.innerHTML = data.weather[0].description;
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
-
+            icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+            icon.classList.remove('hidden')
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+}
 
 
 
