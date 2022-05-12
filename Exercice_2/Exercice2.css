@@ -29,7 +29,6 @@ body{
 .ice{
     background: url("img/seq-b.png");
     z-index:2;
-    background-size:cover;
     position:fixed;
     top:30%;
     right:15%;
