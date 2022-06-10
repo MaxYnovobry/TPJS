@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family: 'staal';
+    src: url('/font/Staatliches-Regular.ttf')
+
+}
+
+body {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'staal';
+    font-size: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+.machine {
+    justify-content: center;
+}
+
+.title {
+    width: 70vh;
+}
+
+img {
+    width : 15vh;
+}
+
+.infoGame {
+    position: fixed;
+    right: 22%;
+    top: 46%;
+    text-align: left; 
+}
+
+
+
+.combinaison {
+    display: grid;
+    margin: 24px 0px;
+}
+.content {
+    display : flex;
+}
+
+span img {
+    width: 2vh;
+}
+
+.emplacements {
+    display: flex;
+    justify-content: center;
+}
+
+.emplacement {
+    margin: 0 2%;
+}
+
+button {
+    position: relative;
+    font-family: 'staal';
+    background-color: #5a0e0e;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 6px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    margin: 4% 1%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }

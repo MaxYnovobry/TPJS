@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color:gray;
+}
+
+header{
+    background-image: url("../img/pepe_banniere.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:40vh;
+    position: relative;
+}
+
+nav{
+    justify-content: space-between;
+    display:flex;
+    position:relative;
+    top:19vh;
+    padding-left:10vw;
+    padding-right:2vw
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-left:4vw;
+    padding-right:4vw
+}
+
+.home{
+    background-color:white;
+    padding:1vw;
+    border-radius:40vw
+}
+
+a{
+    text-decoration:none;
+    color:black
+}
+
+.panier{
+    background-color:white;
+    text-decoration:none;
+    padding:1vw;
+    border-radius:40vw
+}
+
+.main{
+    height:25vh
+}
+
+.main_panier{
+    height:10vh
+}
+
+
+
+.image {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height:20vw;
+    text-align: center;
+}
+
+#container{
+    position: relative;
+    top:8vh;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.image a{
+    background-color:purple;
+    padding:0.5vw;
+}
+
+#shop{
+    background-color:green;
+    padding:0.7vw;
+    border-radius:50vw
+}
+
+
+.container_products {
+    max-width: 950px;
+    justify-content: space-around;
+    margin: 5vw;
+    margin-left : 15vw
+}
+
+.header{
+    width: 85vw;
+    max-width: 950px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid red;
+    margin : 3vw auto
+}
+
+.produit_titre{
+    margin-left:1vw;
+    width: 45vw;
+    position:relative;
+    left:2vw
+}
+
+.prix{
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    position:relative;
+    right:1.2vw
+}
+
+
+.quantite{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+}
+
+.prix_content{
+    width: 15vw;
+    display: flex;
+    align-items: center;
+
+}
+
+.totale{
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    position:relative;
+    right:0.7vw
+}
+
+.totale_content{
+    width: 10vw;
+    display: flex;
+    align-items: center;
+}
+
+.quantite_content{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    position:relative;
+    left:2vw
+}
+
+.produit {
+    width: 45vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0.5vw 0;
+    position:relative;
+    right:2vw
+}
+
+.produits img{
+    height: 10vh
+}
+
+.contenu_panier{
+    display:flex;
+    justify-content: end;
+    width: 85vw;
+    padding:0.5vw;
+    position: relative;
+    right:26.5vw
+}
+
+.totale_panier_title{
+    padding-right:2vw
+}
+
+.totale_panier{
+
+}
+
+.content{
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid blue;
+    margin : 0 auto
+}
+
+.deletePepe{
+    font-size:5vh
+}
+
+.bouton{
+    width: 1.3vw;
+    margin: 1vw;
+}
