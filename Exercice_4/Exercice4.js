@@ -23,16 +23,20 @@ function CALLAPI(cityName) {
     fetch(url, myInit)
         .then((resp) => resp.json())
         .then(function (data) {
-            console.log(data)
-            let temps = document.getElementById('temps')
-            let city = document.getElementById('city')
-            let weathers = document.getElementById('weather')
-            let icon = document.getElementById('icon')
-            temps.innerHTML = data.main.temp;
-            city.innerHTML = data.name;
-            weathers.innerHTML = data.weather[0].description;
-            icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
-            icon.classList.remove('hidden')
+            if (data.cod === "404") {
+                alert("vous n'avez rien trouvé")
+            } else {
+                console.log(data)
+                let temps = document.getElementById('temps')
+                let city = document.getElementById('city')
+                let weathers = document.getElementById('weather')
+                let icon = document.getElementById('icon')
+                temps.innerHTML = data.main.temp;
+                city.innerHTML = data.name;
+                weathers.innerHTML = data.weather[0].description;
+                icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+                icon.classList.remove('hidden')
+            }
         })
         .catch(function (error) {
             console.log(error);

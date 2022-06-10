@@ -5,24 +5,24 @@ let produit = [
         nom:'Pepe',
         tag:'peluche_pepe_1',
         prix: 25,
-        danspanier: 0
+        danspanier: 0,
+        id : 0,
     },
     {
         nom:'Pikachu',
         tag:'pepe_pikachu',
         prix: 42,
-        danspanier: 0
+        danspanier: 0,
+        id : 1,
     },
     {
         nom:'Kermit',
         tag:'kermit',
         prix: 34,
-        danspanier: 0
+        danspanier: 0,
+        id : 2,
     }
 ]
-
-
-
 
 
 for (let i=0; i < paniers.length; i++) {
@@ -32,8 +32,6 @@ for (let i=0; i < paniers.length; i++) {
         alert("Vous avez ajouté un produit au panier")
     })
 }
-
-
 
 function KeepPanier() {
     let Produits = localStorage.getItem('nombreDePaniers');
@@ -104,7 +102,6 @@ function showPanier(){
         Object.values(ElementPaniers).map(item => {
             contenuProduits.innerHTML += `
         <div class="content">
-            <a class="delete ${item.nom}" href="#"> delete ${item.nom} </a>
             <div class="produit">
                 <img src="../img/${item.tag}.jpg">
                 <span>${item.nom}</span>
@@ -113,9 +110,7 @@ function showPanier(){
                 ${item.prix}
             </div>
             <div class="quantite_content">
-                <button class="bouton ${item.nom}" >+</button>
                 <span>${item.danspanier}</span>
-                <button class="bouton">-</button>
             </div>
             <div class="totale_content">
                 ${item.danspanier * item.prix}
@@ -135,22 +130,6 @@ function showPanier(){
                 `
     }
 }
-
-
-
-
-
-//window.addEventListener('load', () => {
-    //const deletePanier = document.querySelectorAll('.delete');
-   // for (let i=0; i < deletePanier.length; i++) {
-    //    deletePanier[i].addEventListener('click',() => {
-       //     ElementPaniers = JSON.parse(ElementPaniers);
-
-      //  )
-      //  })
-   // }
-//});
-
 
 KeepPanier();
 showPanier();

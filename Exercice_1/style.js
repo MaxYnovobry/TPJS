@@ -9,10 +9,11 @@ let chiffre = slide.length;
 // fonction qui crée un sommaire en dessous des images
 
 function sommaire(chiffre) {
+
     for (let i = 0; i < chiffre; i++) {
         let dot = document.createElement("li");
         let newContent = document.createTextNode("");
-        dot.classList.add("t"+i);
+        dot.classList.add("t"+ i);
         dot.dataset.count = i;
         dot.appendChild(newContent);
         document.getElementById("sommaire").appendChild(dot);
